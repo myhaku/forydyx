@@ -1,0 +1,5 @@
+#CLASS {idle} OPEN
+
+#TICKER           {idle}  {#send}  {60}
+
+#CLASS {idle} CLOSE

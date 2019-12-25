@@ -1,0 +1,9 @@
+#split
+#config charset big5
+#config {packet patch} {0.5}
+#event {screen resize} {#split}
+#alias {t+ %0} {#class %0 read %0.tin}
+#alias {t- %0} {#class %0 kill}
+#alias xkx1 {#ses redos mud.pkuxkx.com 8080}
+#alias xkx2 {#ses redosb mud.pkuxkx.com 8080}
+#alias ydyx {#ses redos 148.70.239.12 5555}

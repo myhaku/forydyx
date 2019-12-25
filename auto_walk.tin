@@ -1,0 +1,10 @@
+#CLASS {auto_walk} OPEN
+
+#ACTION {^大车停稳了下来，你可以下车}
+{
+	xia
+}
+{5}
+
+
+#CLASS {auto_walk} CLOSE

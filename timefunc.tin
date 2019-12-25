@@ -1,0 +1,16 @@
+#function {time}
+{
+	#if {"%0" == ""}
+	{
+		#format {epoch} {%T}
+	};
+	#else
+	{
+		#var epoch %0
+	};
+	#format {time} {%t} {{%T}{$epoch}};
+
+	#return $time
+}
+
+#showme The time is @time{}
