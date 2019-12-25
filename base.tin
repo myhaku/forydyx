@@ -1,47 +1,47 @@
-#ALIAS {akb %1 %2}
+#ALIAS {akb %1 %2} \\简化ask sb about sb
 {
 	ask %1 about %2
 }
 {5}
 
-#ALIAS {clc %0}
+#ALIAS {clc %0} \\简化#class classname close
 {
 	#class %0 close
 }
 {5}
 
-#ALIAS {clo %0}
+#ALIAS {clo %0} \\简化#class classname open
 {
 	#class %0 open
 }
 {5}
 
-#ALIAS {clw %0}
+#ALIAS {clw %0} \\简化#class classname write filename
 {
 	#class %0 write %0.tin
 }
 {5}
 
-#ALIAS {czb}
+#ALIAS {czb} \\穿装备
 {
 	wield all;
 	wear all
 }
 {5}
 
-#ALIAS {fm}
+#ALIAS {fm} \\简化fullme
 {
 	fullme
 }
 {5}
 
-#ALIAS {lm}
+#ALIAS {lm} \\简化localmaps
 {
 	localmaps
 }
 {5}
 
-#ALIAS {yzb}
+#ALIAS {yzb} \\中央广场地下要装备，武器是剑
 {
 	draw sword;
 	draw armor;
@@ -53,37 +53,37 @@
 }
 {5}
 
-#ALIAS {t+ %0}
+#ALIAS {t+ %0} \\简化#class classname read filename
 {
 	#class %0 read %0.tin
 }
 {5}
 
-#ALIAS {t- %0}
+#ALIAS {t- %0} \\简化#class classname kill
 {
 	#class %0 kill
 }
 {5}
 
-#ALIAS {xf %1 %2 %3}
+#ALIAS {xf %1 %2 %3} \\简化xue sb skillname for nums
 {
 	xue %1 for %2 %3
 }
 {5}
 
-#ALIAS {xkx1}
+#ALIAS {xkx1} \\北大侠客行
 {
 	#session redos mud.pkuxkx.com 8080;	
 }
 {5}
 
-#ALIAS {xkx2}
+#ALIAS {xkx2} \\北大侠客行
 {
 	#session redosb mud.pkuxkx.com 8080;	
 }
 {5}
 
-#ALIAS {ydyx}
+#ALIAS {ydyx} \\侠客英雄传（云之遥）
 {
 	#session redos 148.70.239.12 5555;
 }
@@ -98,7 +98,7 @@
 #CONFIG           {COMMAND ECHO}  {ON}
 #CONFIG           {CONNECT RETRY}  {0}
 #CONFIG           {HISTORY SIZE}  {1000}
-#CONFIG           {LOG}  {HTML}
+#CONFIG           {LOG}  {HTML}             \\log格式为html
 #CONFIG           {PACKET PATCH}  {0.5}
 #CONFIG           {REPEAT CHAR}  {!}
 #CONFIG           {REPEAT ENTER}  {OFF}
@@ -109,7 +109,7 @@
 #CONFIG           {VERBATIM CHAR}  {\}
 #CONFIG           {VERBOSE}  {OFF}
 #CONFIG           {WORDWRAP}  {ON}
-#FUNCTION {time}
+#FUNCTION {time}  \\一个看时间的小函数，转自https://github.com/zixijian/tt/
 {
 	#if {"%0" == ""}
 	{
