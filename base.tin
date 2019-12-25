@@ -104,7 +104,7 @@
 #CONFIG           {COMMAND ECHO}  {ON}
 #CONFIG           {CONNECT RETRY}  {0}
 #CONFIG           {HISTORY SIZE}  {1000}
-#CONFIG           {LOG}  {RAW}
+#CONFIG           {LOG}  {HTML}
 #CONFIG           {PACKET PATCH}  {0.5}
 #CONFIG           {REPEAT CHAR}  {!}
 #CONFIG           {REPEAT ENTER}  {OFF}
