@@ -73,25 +73,19 @@
 
 #ALIAS {xkx1}
 {
-	#session redos mud.pkuxkx.com 8080;
-	redos;
-	xw798183
+	#session redos mud.pkuxkx.com 8080;	
 }
 {5}
 
 #ALIAS {xkx2}
 {
-	#session redosb mud.pkuxkx.com 8080;
-	redosb;
-	xw798183
+	#session redosb mud.pkuxkx.com 8080;	
 }
 {5}
 
 #ALIAS {ydyx}
 {
 	#session redos 148.70.239.12 5555;
-	redos;
-	xw798183
 }
 {5}
 
