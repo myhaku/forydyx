@@ -24,6 +24,8 @@
 
 #ALIAS {czb} \\穿装备
 {
+	remove all;
+	unwield all;
 	wield all;
 	wear all
 }
