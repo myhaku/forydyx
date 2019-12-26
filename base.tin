@@ -1,28 +1,33 @@
-#ALIAS {akb %1 %2} \\简化ask sb about sb
+#nop简化ask sb about sb
+#ALIAS {akb %1 %2}
 {
 	ask %1 about %2
 }
 {5}
 
-#ALIAS {clc %0} \\简化#class classname close
+ #nop简化#class classname close
+#ALIAS {clc %0}
 {
 	#class %0 close
 }
 {5}
 
-#ALIAS {clo %0} \\简化#class classname open
+ #nop简化#class classname open
+#ALIAS {clo %0}
 {
 	#class %0 open
 }
 {5}
 
-#ALIAS {clw %0} \\简化#class classname write filename
+ #nop简化#class classname write filename
+#ALIAS {clw %0}
 {
 	#class %0 write %0.tin
 }
 {5}
 
-#ALIAS {czb} \\穿装备
+#nop穿装备
+#ALIAS {czb} 
 {
 	remove all;
 	unwield all;
@@ -31,19 +36,22 @@
 }
 {5}
 
-#ALIAS {fm} \\简化fullme
+#nop简化fullme
+#ALIAS {fm} 
 {
 	fullme
 }
 {5}
 
-#ALIAS {lm} \\简化localmaps
+ #nop简化localmaps
+#ALIAS {lm}
 {
 	localmaps
 }
 {5}
 
-#ALIAS {yzb} \\中央广场地下要装备，武器是剑
+ #nop中央广场地下要装备，武器是剑
+#ALIAS {yzb}
 {
 	draw sword;
 	draw armor;
@@ -55,37 +63,42 @@
 }
 {5}
 
-#ALIAS {t+ %0} \\简化#class classname read filename
+ #nop简化#class classname read filename
+#ALIAS {t+ %0}
 {
 	#class %0 read %0.tin
 }
 {5}
 
-#ALIAS {t- %0} \\简化#class classname kill
+ #nop简化#class classname kill
+#ALIAS {t- %0}
 {
 	#class %0 kill
 }
 {5}
 
-#ALIAS {xf %1 %2 %3} \\简化xue sb skillname for nums
+ #nop简化xue sb skillname for nums
+#ALIAS {xf %1 %2 %3}
 {
 	xue %1 for %2 %3
 }
 {5}
 
-#ALIAS {xkx1} \\北大侠客行
+ #nop北大侠客行
+#ALIAS {xkx1}
 {
 	#session redos mud.pkuxkx.com 8080;	
 }
 {5}
 
-#ALIAS {xkx2} \\北大侠客行
+ #nop北大侠客行
+#ALIAS {xkx2}
 {
 	#session redosb mud.pkuxkx.com 8080;	
 }
 {5}
 
-#ALIAS {ydyx} \\侠客英雄传（云之遥）
+#ALIAS {ydyx} #nop侠客英雄传（云之遥）
 {
 	#session redos 148.70.239.12 5555;
 }
