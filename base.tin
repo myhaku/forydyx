@@ -98,7 +98,8 @@
 }
 {5}
 
-#ALIAS {ydyx} #nop侠客英雄传（云之遥）
+ #nop侠客英雄传（云之遥）
+#ALIAS {ydyx}
 {
 	#session redos 148.70.239.12 5555;
 }
