@@ -1,12 +1,25 @@
 #CLASS {gag} OPEN
 
-#ACTION {== Î´Íê¼ÌÐø%s%d\%%s== (q Àë¿ª£¬b Ç°Ò»Ò³£¬ÆäËû¼ÌÐøÏÂÒ»Ò³)}
+#ACTION {== æœªå®Œç»§ç»­%s%d\%%s== (q ç¦»å¼€ï¼Œb å‰ä¸€é¡µï¼Œå…¶ä»–ç»§ç»­ä¸‹ä¸€é¡µ)}
 {
-	#gag {== Î´Íê¼ÌÐø%s%d\%%s== (q Àë¿ª£¬b Ç°Ò»Ò³£¬ÆäËû¼ÌÐøÏÂÒ»Ò³)};
-	#cr
+	#line gag;
+	#cr;
 }
-{5}
 
-#GAG              {== Î´Íê¼ÌÐø%s%d\%%s== (q Àë¿ª£¬b Ç°Ò»Ò³£¬ÆäËû¼ÌÐøÏÂÒ»Ò³)}
+#ACTION {%*è¿‡æ¥ã€‚$}
+{
+     #line gag
+}
+
+#ACTION {%*ç¦»å¼€ã€‚$}
+{
+     #line gag
+}
+
+
+#ACTION {%*è¿›åŽ»ã€‚$}
+{
+     #line gag
+}
 
 #CLASS {gag} CLOSE
