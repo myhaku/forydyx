@@ -1,4 +1,4 @@
-#ACTION {== Î´Íê¼ÌĞø %d%% == (q Àë¿ª£¬b Ç°Ò»Ò³£¬ÆäËû¼ÌĞøÏÂÒ»Ò³)}
+#ACTION {== æœªå®Œç»§ç»­ %d%% == (q ç¦»å¼€ï¼Œb å‰ä¸€é¡µï¼Œå…¶ä»–ç»§ç»­ä¸‹ä¸€é¡µ)}
 {
      #line gag;
      #cr
@@ -17,36 +17,36 @@
      give ling to yue
 }
 
-#ACTION {^´ó³µÍ£ÎÈÁËÏÂÀ´£¬Äã¿ÉÒÔÏÂ³µ(xia)ÁË¡£}
+#ACTION {^å¤§è½¦åœç¨³äº†ä¸‹æ¥ï¼Œä½ å¯ä»¥ä¸‹è½¦(xia)äº†ã€‚}
 {
      xia
 }
 
-#ACTION {^Äã¸øÔÀÁéÉºÒ»¿éÁîÅÆ¡£}
+#ACTION {^ä½ ç»™å²³çµçŠä¸€å—ä»¤ç‰Œã€‚}
 {
      #unticker xlb;
      #unticker xl;
      #delay {10} {s;s;get fentiao;get baicai;get qiezi;#delay {5} {eat fentiao;eat baicai;eat qiezi;drink hulu;n;w;fill hulu;e;n;ask yue about job}}
 }
 
-#ACTION {^ÄãÔÚÓñÈªÔºÑ²ß®£¬ÉĞÎ´·¢ÏÖµĞ×Ù¡£}
+#ACTION {^ä½ åœ¨ç‰æ³‰é™¢å·¡å¼‹ï¼Œå°šæœªå‘ç°æ•Œè¸ªã€‚}
 {
      #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {2}
 }
 
-#ACTION {^ÆÃÆ¤Ò»°ÑÀ¹×¡Äã£ºÒªÏò´Ó´Ë¹ı£¬ÁôÏÂÂòÂ·²Æ£¡ÆÃÆ¤Ò»°ÑÀ­×¡ÁËÄã¡£}
+#ACTION {^æ³¼çš®ä¸€æŠŠæ‹¦ä½ä½ ï¼šè¦å‘ä»æ­¤è¿‡ï¼Œç•™ä¸‹ä¹°è·¯è´¢ï¼æ³¼çš®ä¸€æŠŠæ‹‰ä½äº†ä½ ã€‚}
 {
      #unticker xl;
-     #delay {12} {$hsxl[+$i];#ti xl {#math i $i+1;$hsxl[+$i];#showme $i}} {5}
+     #delay {12} {$hsxl[+$i];#ti xl {#math i $i+1;$hsxl[+$i];#showme $i} {5}
 }
 
-#ACTION {^ÔÀÁéÉºÄÃ³öÒ»ÕÅµØÍ¼£¬°Ñ»ªÉ½ĞèÒªÑ²ÂßµÄÇøÓòÓÃ²»Í¬ÑÕÉ«±ê×¢³öÀ´£¬²¢ºÍÄãËµÁËÒ»±é¡£}
+#ACTION {^å²³çµçŠæ‹¿å‡ºä¸€å¼ åœ°å›¾ï¼ŒæŠŠåå±±éœ€è¦å·¡é€»çš„åŒºåŸŸç”¨ä¸åŒé¢œè‰²æ ‡æ³¨å‡ºæ¥ï¼Œå¹¶å’Œä½ è¯´äº†ä¸€éã€‚}
 {
      #variable i 0;
      #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {5}
 }
 
-#ACTION {^ÔÀÁéÉºËµµÀ£º¡¸Äã¸Õ¸Õ×ö¹ıÈÎÎñ£¬ÏÈÈ¥ĞİÏ¢Ò»»á°É¡£¡¹}
+#ACTION {^å²³çµçŠè¯´é“ï¼šã€Œä½ åˆšåˆšåšè¿‡ä»»åŠ¡ï¼Œå…ˆå»ä¼‘æ¯ä¸€ä¼šå§ã€‚ã€}
 {
      eat fentiao;
      eat baicai;
@@ -207,7 +207,6 @@
 #PATHDIR          {westup}  {eastdown}  {24}
 
 #TICKER           {idle}  {#send;eat fentiao;eat baicai;eat qiezi;drink hulu}                          {60}
-#TICKER           {xl}  {#math i $i+1;$hsxl[+$i];#showme $i}           {60}
 
 #VARIABLE         {fbp-ldy}  {southdown;southup;southup;southdown;southup;south;south}
 #VARIABLE         {hs-ldy}  {southeast;southup;eastup;southup;eastup;southup;southup;southdown;southup;south;south}
