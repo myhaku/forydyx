@@ -1,0 +1,219 @@
+#ACTION {== 未完继续 %d%% == (q 离开，b 前一页，其他继续下一页)}
+{
+     #line gag;
+     #cr
+}
+
+#ACTION {^#PATH WALK: #END OF PATH.}
+{
+     #unticker xl;
+     give ling to yue
+}
+
+#ACTION {^38$}
+{
+     #unticker xl;
+     #variable i 0;
+     give ling to yue
+}
+
+#ACTION {^大车停稳了下来，你可以下车(xia)了。}
+{
+     xia
+}
+
+#ACTION {^你给岳灵珊一块令牌。}
+{
+     #unticker xlb;
+     #unticker xl;
+     #delay {10} {s;s;get fentiao;get baicai;get qiezi;#delay {5} {eat fentiao;eat baicai;eat qiezi;drink hulu;n;w;fill hulu;e;n;ask yue about job}}
+}
+
+#ACTION {^你在玉泉院巡弋，尚未发现敌踪。}
+{
+     #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {2}
+}
+
+#ACTION {^泼皮一把拦住你：要向从此过，留下买路财！泼皮一把拉住了你。}
+{
+     #unticker xl;
+     #delay {12} {$hsxl[+$i];#ti xl {#math i $i+1;$hsxl[+$i];#showme $i}} {5}
+}
+
+#ACTION {^岳灵珊拿出一张地图，把华山需要巡逻的区域用不同颜色标注出来，并和你说了一遍。}
+{
+     #variable i 0;
+     #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {5}
+}
+
+#ACTION {^岳灵珊说道：「你刚刚做过任务，先去休息一会吧。」}
+{
+     eat fentiao;
+     eat baicai;
+     eat qiezi;
+     drink hulu;
+     #delay {10} {ask yue about job}
+}
+
+
+#ALIAS {ak}
+{
+     ask %1 about %2
+}
+
+#ALIAS {clc %1}
+{
+     #class %1 close
+}
+
+#ALIAS {clo %1}
+{
+     #class %1 open
+}
+
+#ALIAS {clr %1}
+{
+     #class %1 read %1.tin
+}
+
+#ALIAS {clw %1}
+{
+     #class %1 write %1.tin
+}
+
+#ALIAS {gef %1 %2}
+{
+     get %1 from %2
+}
+
+#ALIAS {t+ %0}
+{
+     #class %0 read %0.tin
+}
+
+#ALIAS {t- %0}
+{
+     #class %0 kill
+}
+
+#ALIAS {ut %1}
+{
+     #unticker %1
+}
+
+#ALIAS {x %1 %2 %3}
+{
+     xue %1 for %2 %3
+}
+
+#ALIAS {xkx1}
+{
+     #session redos mud.pkuxkx.com 8080
+}
+
+#ALIAS {xkx2}
+{
+     #session redosb mud.pkuxkx.com 8080
+}
+
+#ALIAS {xlstart}
+{
+     #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {5}
+}
+
+#ALIAS {xuet}
+{
+     #ticker xue {xue liang for force 1} {1}
+}
+
+#ALIAS {xuet %1 %2 %3}
+{
+     #ticker xue {xue liang for %1 %2} {%3}
+}
+
+#ALIAS {ydyx}
+{
+     #session redos 148.70.239.12 5555
+}
+
+#ALIAS {yzbj}
+{
+     draw sword;
+     draw armor;
+     draw head;
+     draw cloth;
+     draw surcoat;
+     draw boots;
+     unwield all;
+     wield all;
+     remove all;
+     wear all
+}
+
+
+#CONFIG           {AUTO TAB}  {5000}
+#CONFIG           {BUFFER SIZE}  {10000}
+#CONFIG           {CHARSET}  {BIG-5}
+#CONFIG           {COLOR MODE}  {TRUE}
+#CONFIG           {COLOR PATCH}  {OFF}
+#CONFIG           {COMMAND COLOR}  {\e[0;37m}
+#CONFIG           {COMMAND ECHO}  {ON}
+#CONFIG           {CONNECT RETRY}  {   0.0}
+#CONFIG           {HISTORY SIZE}  {1000}
+#CONFIG           {LOG MODE}  {RAW}
+#CONFIG           {MOUSE TRACKING}  {OFF}
+#CONFIG           {PACKET PATCH}  {0.50}
+#CONFIG           {RANDOM SEED}  {1321607210}
+#CONFIG           {REPEAT CHAR}  {!}
+#CONFIG           {REPEAT ENTER}  {ON}
+#CONFIG           {SCREEN READER}  {OFF}
+#CONFIG           {SCROLL LOCK}  {ON}
+#CONFIG           {SPEEDWALK}  {OFF}
+#CONFIG           {TAB WIDTH}  {8}
+#CONFIG           {TELNET}  {ON}
+#CONFIG           {TINTIN CHAR}  {#}
+#CONFIG           {VERBATIM}  {OFF}
+#CONFIG           {VERBATIM CHAR}  {\}
+#CONFIG           {VERBOSE}  {OFF}
+#CONFIG           {WORDWRAP}  {ON}
+
+#PATHDIR          {d}  {u}  {32}
+#PATHDIR          {down}  {up}  {32}
+#PATHDIR          {e}  {w}  {2}
+#PATHDIR          {east}  {west}  {2}
+#PATHDIR          {eastdown}  {westup}  {34}
+#PATHDIR          {eastup}  {westdown}  {18}
+#PATHDIR          {n}  {s}  {1}
+#PATHDIR          {ne}  {sw}  {3}
+#PATHDIR          {north}  {south}  {1}
+#PATHDIR          {northdown}  {southup}  {33}
+#PATHDIR          {northeast}  {southwest}  {3}
+#PATHDIR          {northup}  {southdown}  {17}
+#PATHDIR          {northwest}  {southeast}  {9}
+#PATHDIR          {nw}  {se}  {9}
+#PATHDIR          {s}  {n}  {4}
+#PATHDIR          {se}  {nw}  {6}
+#PATHDIR          {south}  {north}  {4}
+#PATHDIR          {southdown}  {northup}  {36}
+#PATHDIR          {southeast}  {northwest}  {6}
+#PATHDIR          {southup}  {northdown}  {20}
+#PATHDIR          {southwest}  {northeast}  {12}
+#PATHDIR          {sw}  {ne}  {12}
+#PATHDIR          {u}  {d}  {16}
+#PATHDIR          {up}  {down}  {16}
+#PATHDIR          {w}  {e}  {8}
+#PATHDIR          {west}  {east}  {8}
+#PATHDIR          {westdown}  {eastup}  {40}
+#PATHDIR          {westup}  {eastdown}  {24}
+
+#TICKER           {idle}  {#send;eat fentiao;eat baicai;eat qiezi;drink hulu}                          {60}
+#TICKER           {xl}  {#math i $i+1;$hsxl[+$i];#showme $i}           {60}
+
+#VARIABLE         {fbp-ldy}  {southdown;southup;southup;southdown;southup;south;south}
+#VARIABLE         {hs-ldy}  {southeast;southup;eastup;southup;eastup;southup;southup;southdown;southup;south;south}
+#VARIABLE         {hsxl}  {{1}{north}{2}{north}{3}{east}{4}{southdown}{5}{southdown}{6}{southdown}{7}{northup}{8}{northup}{9}{northup}{10}{west}{11}{northdown}{12}{eastup}{13}{westdown}{14}{northup}{15}{westup}{16}{eastdown}{17}{northdown}{18}{northdown}{19}{northup}{20}{southdown}{21}{westdown}{22}{northdown}{23}{westdown}{24}{northdown}{25}{northwest}{26}{north}{27}{south}{28}{southeast}{29}{southup}{30}{eastup}{31}{southup}{32}{eastup}{33}{southup}{34}{southup}{35}{southdown}{36}{southup}{37}{south}{38}{south}}
+#VARIABLE         {i}  {11}
+#VARIABLE         {index}  {3}
+#VARIABLE         {ldy-fbp}  {north;north;northdown;northup;northdown;northdown;northup}
+#VARIABLE         {ldy-hs}  {southup;eastup;southup;eastup;southup;southup;southdown;southup;south;south}
+
