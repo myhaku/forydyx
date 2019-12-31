@@ -106,16 +106,6 @@
      xue %1 for %2 %3
 }
 
-#ALIAS {xkx1}
-{
-     #session redos mud.pkuxkx.com 8080
-}
-
-#ALIAS {xkx2}
-{
-     #session redosb mud.pkuxkx.com 8080
-}
-
 #ALIAS {xlstart}
 {
      #ticker xl {#math i $i+1;$hsxl[+$i];#showme $i} {5}
