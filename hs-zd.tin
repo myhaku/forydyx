@@ -1,6 +1,6 @@
 #CLASS {hs-zd} OPEN
 
-#ACTION {^%*³ÃÄã²»×¢Òâ£¬Ò»ÁïÑÌ²»ÖªµÀÅÜµ½ÄÄÀïÈ¥ÁË¡£}
+#ACTION {^%*è¶ä½ ä¸æ³¨æ„ï¼Œä¸€æºœçƒŸä¸çŸ¥é“è·‘åˆ°å“ªé‡Œå»äº†ã€‚}
 {
      #unticker zd;
      #variable step 0;
@@ -8,7 +8,7 @@
      #delay {2} {#ticker zdz {ask dizi about gen;#math step $step+1;$hszdl[+$step];ask dizi about gen} {1}}
 }
 
-#ACTION {^%1µÀ£ººÃ°É£¬ºÃ°É£¬ÎÒ»ØÈ¥»¹²»ĞĞÂğ£¿}
+#ACTION {^%1é“ï¼šå¥½å§ï¼Œå¥½å§ï¼Œæˆ‘å›å»è¿˜ä¸è¡Œå—ï¼Ÿ}
 {
      #unticker zdz;
      #variable step 0;
@@ -18,25 +18,25 @@
      #delay {2} {$zdzb;#ti zd {zhidian dizi} {1};#unvar zdzb}
 }
 
-#ACTION {^%1µÀ£ºĞİÏ¢Ò»»áĞĞ²»ĞĞ°¡£¿}
+#ACTION {^%1é“ï¼šä¼‘æ¯ä¸€ä¼šè¡Œä¸è¡Œå•Šï¼Ÿ}
 {
      #unticker zdz;
      #path end;
      #delay {2} {ask dizi about gen}
 }
 
-#ACTION {^%1Ò»ÕĞÒ»Ê½ÓĞ°åÓĞÑÛ£¬Äã¿ÉÒÔ»ØÈ¥ºÍÄşÖĞÔò¸´ÃüÁË¡£}
+#ACTION {^%1ä¸€æ‹›ä¸€å¼æœ‰æ¿æœ‰çœ¼ï¼Œä½ å¯ä»¥å›å»å’Œå®ä¸­åˆ™å¤å‘½äº†ã€‚}
 {
      #unticker zd;
      #delay {2} {w;s;get gentiao;get baicai;get qiezi;eat fentiao;eat baicai;eat qiezi;drink hulu;#delay {2} {n;w;fill hulu;w;ask ning about finish}}
 }
 
-#ACTION {^ÄşÖĞÔò¶ÔÄãËµµÀ£º×î½ü»ªÉ½À´ÁËĞ©ĞÂµÜ×Ó£¬Äã´øÈ¥Á·¹¦·¿Ö¸µã(zhidian)Ò»ÏÂ°É¡£}
+#ACTION {^å®ä¸­åˆ™å¯¹ä½ è¯´é“ï¼šæœ€è¿‘åå±±æ¥äº†äº›æ–°å¼Ÿå­ï¼Œä½ å¸¦å»ç»ƒåŠŸæˆ¿æŒ‡ç‚¹(zhidian)ä¸€ä¸‹å§ã€‚}
 {
      #delay {2} {e;e;e;#ti zd {zhidian dizi} {1}}
 }
 
-#ACTION {^ÄşÖĞÔòËµµÀ£º¡¸Äã¸Õ¸Õ×ö¹ıÈÎÎñ£¬ÏÈÈ¥ĞİÏ¢Ò»»á°É¡£¡¹}
+#ACTION {^å®ä¸­åˆ™è¯´é“ï¼šã€Œä½ åˆšåˆšåšè¿‡ä»»åŠ¡ï¼Œå…ˆå»ä¼‘æ¯ä¸€ä¼šå§ã€‚ã€}
 {
      e;
      fill hulu;
@@ -44,14 +44,14 @@
      #delay {2} {ask ning about job}
 }
 
-#ACTION {^Íê³ÉÈÎÎñºó£¬Äã±»½±ÀøÁË£º}
+#ACTION {^å®Œæˆä»»åŠ¡åï¼Œä½ è¢«å¥–åŠ±äº†ï¼š}
 {
      #delay {2} {ask ning about job}
 }
 
 #ALIAS {anf}
 {
-     ask ning about Éú»î·Ñ
+     ask ning about ç”Ÿæ´»è´¹
 }
 
 #ALIAS {anfa}
@@ -69,8 +69,30 @@
      #unticker %1
 }
 
-#VARIABLE         {hsxl}  {{1}{north}{2}{north}{3}{east}{4}{southdown}{5}{southdown}{6}{southdown}{7}{northup}{8}{northup}{9}{northup}{10}{west}{11}{northdown}{12}{eastup}{13}{westdown}{14}{northup}{15}{westup}{16}{eastdown}{17}{northdown}{18}{northdown}{19}{northup}{20}{southdown}{21}{westdown}{22}{northdown}{23}{westdown}{24}{northdown}{25}{northwest}{26}{north}{27}{south}{28}{southeast}{29}{southup}{30}{eastup}{31}{southup}{32}{eastup}{33}{southup}{34}{southup}{35}{southdown}{36}{southup}{37}{south}{38}{south}}
-#VARIABLE         {hszd}  {w;s;n;w;s;n;n;s;w;e;e;n;n;n;e;southdown;southdown;southdown;northup;northup;northup;w;northdown;eastup;westdown;northup;westup;eastdown;northdown;northdown;northup;southdown;westdown;northdown;westdown;northdown;northwest;n;s;northwest;southwest;southeast;southup;eastup;southup;eastup;southup;southup;southdown;southup;s;s;s;e}
+#PATHDIR          {north}  {south}  {1}
+#PATHDIR          {east}  {west}  {2}
+#PATHDIR          {south}  {north}  {4}
+#PATHDIR          {west}  {east}  {8}
+
+#PATHDIR          {up}  {down}  {16}
+#PATHDIR          {down}  {up}  {32}
+#PATHDIR	        {out} {enter} {64}
+#PATHDIR	        {enter} {out} {128}
+
+#PATHDIR          {northup}  {southdown}  {17}
+#PATHDIR          {southdown}  {northup}  {36}
+#PATHDIR          {northdown}  {southup}  {33}
+#PATHDIR          {southup}  {northdown}  {20}
+#PATHDIR          {westup}  {eastdown}  {24}
+#PATHDIR          {eastdown}  {westup}  {34}
+#PATHDIR          {westdown}  {eastup}  {40}
+#PATHDIR          {eastup}  {westdown}  {18}
+
+#PATHDIR          {northeast}  {southwest}  {3}
+#PATHDIR          {southeast}  {northwest}  {6}
+#PATHDIR          {northwest}  {southeast}  {9}
+#PATHDIR          {southwest}  {northeast}  {12}
+
 #VARIABLE         {hszdl}  {{1}{w}{2}{s}{3}{n}{4}{w}{5}{s}{6}{n}{7}{n}{8}{s}{9}{w}{10}{e}{11}{e}{12}{n}{13}{n}{14}{n}{15}{e}{16}{southdown}{17}{southdown}{18}{southdown}{19}{northup}{20}{northup}{21}{northup}{22}{w}{23}{northdown}{24}{eastup}{25}{westdown}{26}{northup}{27}{westup}{28}{eastdown}{29}{northdown}{30}{northdown}{31}{northup}{32}{southdown}{33}{westdown}{34}{northdown}{35}{westdown}{36}{northdown}{37}{northwest}{38}{n}{39}{s}{40}{southeast}{41}{southup}{42}{eastup}{43}{southup}{44}{eastup}{45}{southup}{46}{southup}{47}{southdown}{48}{southup}{49}{s}{50}{s}{51}{s}{52}{e}}
 #VARIABLE         {step}  {0}
 
