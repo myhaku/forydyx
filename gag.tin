@@ -2,24 +2,24 @@
 
 #ACTION {== 未完继续%s%d\%%s== (q 离开，b 前一页，其他继续下一页)}
 {
-	#line gag;
+	#gag {^== 未完继续%*};
 	#cr;
 }
 
 #ACTION {%*过来。$}
 {
-     #line gag
+     #gag {%*过来。$}
 }
 
 #ACTION {%*离开。$}
 {
-     #line gag
+     #gag {%*离开。$}
 }
 
 
 #ACTION {%*进去。$}
 {
-     #line gag
+     #gag {%*进去。$}
 }
 
 #CLASS {gag} CLOSE
