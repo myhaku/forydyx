@@ -1,0 +1,9 @@
+#alias {fm} {fullme}
+
+#act {http://pkuxkx.net/antirobot/robot.php?filename=%1}
+{
+    #system wget -r http://pkuxkx.net/antirobot/robot.php?filename=%1;
+    #system mv pkuxkx.net/antirobot/b2evo_captcha_tmp/* .;
+    #system feh;
+    #system rm *.jpg;
+}
